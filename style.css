@@ -1,0 +1,133 @@
+:root {
+    --background: #c09dce;
+    --display: #2c3e50;
+    --hover_boder: #d5d8dc;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.container {
+    width: 36vh;
+    height: 44vh;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 85px 232px;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--background);
+    box-shadow:  -5px 5px 11px #a184ad,
+             5px -5px 11px #dfb6ef;
+}
+
+.display {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    grid-area: 1 / 1 / 2 / 2;
+    flex-direction: column;
+    place-content: flex-end space-between;
+    justify-self: center;
+    text-align: right;
+    background-color: var(--display);
+    margin-top: 5px;
+    border: 5px ridge var(--hover_boder);
+    border-radius: 10px;
+    color: var(--hover_boder);
+}
+
+.previous-operand {
+    padding: 5px;
+}
+
+.current-operand {
+    padding: 5px;
+    font-size: 25px;
+}
+
+.keyboard {
+    grid-area: 2 / 2 / 3 / -2;
+    margin: 5px;
+    display: flex;
+}
+
+.numbers-keyboard {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(4, 40px);
+    gap: 5px;
+}
+
+.btnPress {
+    border-radius: 50px;
+    border: none;
+    background: var(--background);
+    box-shadow: inset -5px 5px 11px #a184ad,
+            inset 5px -5px 11px #dfb6ef;
+    cursor: pointer;
+}
+
+.btnPress:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 3 /4;
+}
+
+.btnPress:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.btnPress:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.btnPress:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.btnPress:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.btnPress:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.btnPress:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.btnPress:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+} 
+
+.btnPress:nth-child(9) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+
+.btnPress:nth-child(14) {
+    grid-column: 4 / 5 ;
+    grid-row: 3 / 5;
+}
+
+.btnPress:nth-child(15) {
+    grid-column: 5 / 6;
+    grid-row: 3 / 5;
+}
+
+/* hovers */
+
+button:hover {
+    background-color: var(--hover_boder);
+    box-shadow: none;
+}
